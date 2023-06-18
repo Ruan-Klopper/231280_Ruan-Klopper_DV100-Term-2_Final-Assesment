@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order</title>
+
+    <!--Internal Documents-->
+    <link rel="stylesheet" href="../css/cart.css" />
+    <script src="../js/cart.js"></script>
+    <!--External Documents-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&family=Open+Sans&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <nav>
+        <div class="nav-bar">
+          <a href="../index.html"><div class="logo">SuperSubs</div></a>
+          <div class="nav-bar-pages">
+            <ul>
+              <a href="../index.html"><li>HOME</li></a>
+
+              <a href="../pages/order.html"><li>ORDER</li></a>
+              <li id="items-in-cart" class="sel">CART:</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <div class="frm-box">
+            <h2>Order summary:</h2>
+            <div class="spacer"></div>
+
+            <div class="container">
+              <div id="order-summary" class="row"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="frm-box">
+            <h2>Grand total:</h2>
+            <div id="order-total">
+              <h2>--:--</h2>
+            </div>
+
+            <div class="spacer"></div>
+            <h2>Apply discount</h2>
+            <label for="discount">Insert discount code</label>
+            <input
+              type="discount"
+              class="form-control"
+              id="discount"
+              placeholder="Discound code"
+            />
+            <div class="spacer"></div>
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              onclick="applyDiscount()"
+            >
+              Apply code
+            </button>
+          </div>
+
+          <div class="frm-box">
+            <h2>Proceed to checkout</h2>
+            <button
+              class="btn btn-outline-dark"
+              type="submit"
+              onclick="setOrder()"
+            >
+              Confirm Order
+            </button>
+            <button
+              class="btn btn-outline-dark"
+              type="submit"
+              onclick="resetOrder()"
+            >
+              Reset order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <h2>The</h2>
+            <h1>SuberSubs</h1>
+            <h2>inc.</h2>
+          </div>
+          <div class="col-3"></div>
+          <div class="col-3"></div>
+          <div class="col-3">
+            <h3>All rights reserved</h3>
+            <a href="../pages/cart.html"><h3>Back to the top</h3></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
